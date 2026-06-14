@@ -1,3 +1,101 @@
 <resources>
     <string name="app_name">MyKrakow</string>
+    <string name="back_arrow_description">back arrow</string>
+
+    <string name="category_1">Places</string>
+    <string name="category_2">Parks</string>
+    <string name="category_3">Ramen restaurants</string>
+    <string name="category_4">Coffee shops</string>
+
+    <string name="no_description">No description available yet.</string>
+    <string name="place_1_title">Kościół św. Józefa</string>
+    <string name="place_1_desc">Majestatyczna świątynia górująca nad Podgórzem, zachwycająca
+        neogotycką architekturą i detalami fasady. Jej strzeliste wieże widać z daleka, a wnętrze
+        emanuje spokojem i duchową atmosferą. To jedno z najbardziej fotogenicznych miejsc w tej
+        części miasta.</string>
+    <string name="place_2_title">Wzgórze Wawel</string>
+    <string name="place_2_desc">Historyczne serce Krakowa, gdzie królewski zamek i katedra tworzą
+        symbol polskiej państwowości. Z tarasów rozciąga się widok na Wisłę i panoramę miasta.
+        Miejsce pełne legend, historii i majestatu.</string>
+    <string name="place_3_title">Kładka Ojca Bernatka</string>
+    <string name="place_3_desc">Nowoczesny most łączący Kazimierz z Podgórzem, ozdobiony rzeźbami
+        balansujących postaci. To ulubione miejsce spacerów i romantycznych spotkań nad Wisłą.
+        Wieczorem zachwyca subtelnym oświetleniem i widokiem na rzekę.</string>
+    <string name="place_4_title">Kościół Mariacki</string>
+    <string name="place_4_desc">Ikona Krakowa z charakterystycznymi wieżami i słynnym ołtarzem
+        Wita Stwosza. Co godzinę z wyższej wieży rozbrzmiewa hejnał, który stał się symbolem miasta.
+        Wnętrze zachwyca bogactwem kolorów i gotycką harmonią.</string>
+    <string name="place_5_title">Ulica Floriańska</string>
+    <string name="place_5_desc">jedna z najbardziej znanych ulic Starego Miasta, prowadząca
+        od Bramy Floriańskiej do Rynku Głównego. Tętni życiem, pełna kawiarni, sklepów i zabytkowych
+        kamienic. Spacer nią to obowiązkowy punkt każdej wizyty w Krakowie.</string>
+
+    <string name="park_1_title">Park Jordana</string>
+    <string name="park_1_desc">Jeden z najbardziej kultowych parków Krakowa, pełen alejek, rzeźb
+        i szerokich trawników. To idealne miejsce na sport, piknik lub spokojny spacer. Latem tętni
+        życiem dzięki boiskom i rekreacyjnym przestrzeniom.</string>
+    <string name="park_2_title">Park Tysiąclecia</string>
+    <string name="park_2_desc">Nowoczesny, rozległy park w Nowej Hucie, zaprojektowany z myślą
+        o mieszkańcach w każdym wieku. Znajdziesz tu strefy rekreacyjne, place zabaw i liczne
+        ścieżki spacerowe. To świetne miejsce na odpoczynek z dala od miejskiego zgiełku.</string>
+    <string name="park_3_title">Park Bednarskiego</string>
+    <string name="park_3_desc">Zielona oaza w sercu Podgórza, położona na terenie dawnego
+        kamieniołomu. Charakteryzuje się malowniczymi skałami, zacienionymi alejkami i spokojną
+        atmosferą. Idealny na relaksujący spacer wśród natury.</string>
+    <string name="park_4_title">Planty</string>
+    <string name="park_4_desc">Zielony pierścień otaczający Stare Miasto, pełen drzew, ławek
+        i historycznych zakątków. To jedno z najpopularniejszych miejsc spacerowych w centrum.
+        Łączy naturę z historią, prowadząc wzdłuż dawnych murów obronnych.</string>
+    <string name="park_5_title">Park Lotników</string>
+    <string name="park_5_desc">Ogromna, nowoczesna przestrzeń rekreacyjna między Czyżynami
+        a Grzegórzkami. Znajdują się tu alejki, stawy, place zabaw i Ogród Doświadczeń. To idealne
+        miejsce na aktywny wypoczynek i rodzinne spacery.</string>
+
+    <string name="ramen_1_title">Akita ramen</string>
+    <string name="ramen_1_desc">Nowoczesne miejsce inspirowane japońskimi izakayami,
+        gdzie aromatyczny bulion spotyka się z perfekcyjnie ugotowanym makaronem. Wnętrze jest
+        minimalistyczne, z akcentami drewna i światła. Idealne na szybki, ale pełen smaku
+        lunch.</string>
+    <string name="ramen_2_title">Ramen Royal</string>
+    <string name="ramen_2_desc">Elegancka restauracja, która traktuje ramen jak królewskie danie.
+        Buliony są głębokie i intensywne, a dodatki dopracowane w każdym szczególe. To miejsce
+        dla tych, którzy szukają klasy i perfekcji w każdym łyku.</string>
+    <string name="ramen_3_title">Ramen Shop</string>
+    <string name="ramen_3_desc">Luźna, streetfoodowa atmosfera i otwarta kuchnia, w której bulion
+        gotuje się przez wiele godzin. Menu jest krótkie, ale pełne charakteru. Idealne miejsce
+        na spontaniczny wypad z przyjaciółmi.</string>
+    <string name="ramen_4_title">Kinki Ramen</string>
+    <string name="ramen_4_desc">Odważne połączenia smaków i nowoczesne podejście do klasyki.
+        Wnętrze jest kolorowe, z japońskimi motywami i energią młodego miasta. To ramen z pazurem,
+        który zapada w pamięć.</string>
+    <string name="ramen_5_title">Vegan AF Ramen</string>
+    <string name="ramen_5_desc">Roślinna alternatywa dla tradycyjnego ramen, pełna umami i
+        kreatywnych składników. Buliony bazują na warzywach i fermentowanych dodatkach. Idealne
+        miejsce dla wegan i wszystkich, którzy lubią odkrywać nowe smaki.</string>
+
+    <string name="coffee_1_title">Tociekawa</string>
+    <string name="coffee_1_desc">Kameralne miejsce w sercu miasta, znane z doskonałej kawy
+        speciality i przytulnego, minimalistycznego wnętrza. Idealne na spokojny poranek lub
+        spotkanie przy aromatycznym espresso. Wyróżnia się dbałością o detale i serdeczną
+        obsługą.</string>
+    <string name="coffee_2_title">Busz</string>
+    <string name="coffee_2_desc">Kawiarnia o nieco dzikim, roślinnym klimacie, wypełniona zielenią
+        i naturalnym światłem. Serwuje kawy z najlepszych palarni oraz lekkie przekąski inspirowane
+        sezonem. To miejsce, które łączy naturę z miejskim rytmem.</string>
+    <string name="coffee_3_title">NIĆ.</string>
+    <string name="coffee_3_desc">Stylowe wnętrze z artystycznym charakterem, gdzie kawa spotyka się
+        z kulturą. Oprócz świetnych naparów można tu trafić na wystawy, koncerty i spotkania twórcze.
+        Atmosfera sprzyja inspiracji i rozmowie.</string>
+    <string name="coffee_4_title">COFFEE GARDEN</string>
+    <string name="coffee_4_desc">Przestrzeń pełna światła i zieleni, idealna na chwilę relaksu
+        w centrum miasta. Oferuje szeroki wybór kaw i deserów, a latem zachwyca ogródkiem.
+        To miejsce, w którym kawa naprawdę smakuje jak odpoczynek.</string>
+    <string name="coffee_5_title">String Taste Speciality Coffee</string>
+    <string name="coffee_5_desc">Nowoczesna kawiarnia skupiona na jakości ziaren i precyzji parzenia.
+        Wnętrze jest proste, ale eleganckie, z naciskiem na doświadczenie smakowe. To punkt
+        obowiązkowy dla miłośników kaw speciality w Krakowie.</string>
+
+
+
+
 </resources>
