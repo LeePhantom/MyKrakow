@@ -31,11 +31,19 @@ class CategoriesViewModel : ViewModel() {
             )
         }
     }
+    fun updateIsScreenExpanded(isExpanded: Boolean) {
+        _uiState.update {
+            it.copy(
+                isScreenExpanded = isExpanded
+            )
+        }
+    }
 }
 
 
 data class CategoriesUiState(
     val categoriesList: List<Category> = emptyList(),
     val currentCategory: Category = CategoriesDataProvider.defaultCategory,
-    val isShowingCategories: Boolean = true
+    val isShowingCategories: Boolean = true,
+    val isScreenExpanded: Boolean = false
 )

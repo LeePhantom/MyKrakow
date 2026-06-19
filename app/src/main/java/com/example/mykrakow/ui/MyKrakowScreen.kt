@@ -83,6 +83,7 @@ fun MyKrakowApp(
     val contentType: MyKrakowContentType
     if (windowSize == WindowWidthSizeClass.Expanded) {
         contentType = MyKrakowContentType.COMBINED_SCREENS
+        categoriesViewModel.updateIsScreenExpanded(true)
     } else {
         contentType = MyKrakowContentType.SINGLE_SCREEN
     }
@@ -96,7 +97,8 @@ fun MyKrakowApp(
                 recommendationsUiState = recommendationsUiState,
                 canNavigateUp = navController.previousBackStackEntry != null,
                 navigateUp = { navController.navigateUp() },
-                onLogoClick = { navController.navigate(MyKrakowScreen.CATEGORIES.name) },
+                onLogoClick = { navController.popBackStack(
+                    route = MyKrakowScreen.CATEGORIES.name, inclusive = false) },
                 contentType = contentType
             )
         }
@@ -193,22 +195,28 @@ private fun MyKrakowAppBar(
         val appLogoSize: Int
         )
 
-    val (titleId, fontStyle, appLogoSize) = when (currentScreen) {
-        MyKrakowScreen.CATEGORIES -> AppBarStyle(
+    val (titleId, fontStyle, appLogoSize) = when {
+        currentScreen == MyKrakowScreen.CATEGORIES -> AppBarStyle(
             R.string.app_name,
             MaterialTheme.typography.displaySmall,
             R.dimen.app_logo_size_large
         )
-        MyKrakowScreen.RECOMMENDATIONS -> AppBarStyle(
+        currentScreen == MyKrakowScreen.RECOMMENDATIONS -> AppBarStyle(
             categoriesUiState.currentCategory.titleResourceId,
             MaterialTheme.typography.displaySmall,
             R.dimen.app_logo_size_medium
         )
-        else -> AppBarStyle(
+        currentScreen == MyKrakowScreen.DETAILS &&
+                contentType == MyKrakowContentType.SINGLE_SCREEN -> AppBarStyle(
                 recommendationsUiState.currentDetails.titleResourceId,
                 MaterialTheme.typography.displaySmall,
                 R.dimen.app_logo_size_medium
             )
+        else -> AppBarStyle(
+            categoriesUiState.currentCategory.titleResourceId,
+            MaterialTheme.typography.displaySmall,
+            R.dimen.app_logo_size_medium
+        )
     }
 
     TopAppBar(
