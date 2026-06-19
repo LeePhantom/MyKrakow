@@ -1,5 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+    <dimen name="large_screen_card_width">400.dp</dimen>
+
+    <dimen name="app_logo_size_large">64.dp</dimen>
+    <dimen name="app_logo_size_medium">48.dp</dimen>
+    <dimen name="app_logo_size_small">36.dp</dimen>
+
     <dimen name="categories_icon_size">64.dp</dimen>
 
     <dimen name="card_corner_radius">20.dp</dimen>
@@ -7,6 +13,7 @@
     <dimen name="card_text_vertical_space">4.dp</dimen>
     <dimen name="logo_image_border_width">2.dp</dimen>
 
+    <dimen name="details_column_width">400.dp</dimen>
     <dimen name="details_image_corner_radius">5.dp</dimen>
     <dimen name="details_image_border_width">2.dp</dimen>
 

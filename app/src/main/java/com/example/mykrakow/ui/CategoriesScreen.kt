@@ -7,6 +7,7 @@ import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.size
+import androidx.compose.foundation.layout.width
 import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.foundation.lazy.items
 import androidx.compose.foundation.shape.RoundedCornerShape
@@ -29,13 +30,14 @@ import androidx.compose.ui.graphics.vector.ImageVector
 import androidx.compose.ui.res.dimensionResource
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.tooling.preview.Preview
+import androidx.compose.ui.unit.Dp
 import androidx.compose.ui.unit.dp
 import androidx.lifecycle.viewmodel.compose.viewModel
 import com.example.mykrakow.data.CategoriesDataProvider
 import com.example.mykrakow.model.Category
 import com.example.mykrakow.ui.theme.MyKrakowTheme
 import com.example.mykrakow.R
-
+import com.example.mykrakow.ui.utils.MyKrakowContentType
 
 
 @Composable
@@ -44,7 +46,7 @@ fun CategoriesScreen(
     onCategoryClick: (Category) -> Unit,
     modifier: Modifier = Modifier,
 ) {
-    LazyColumn() {
+    LazyColumn(modifier = Modifier.padding(dimensionResource(R.dimen.padding_large))) {
         items(categories) { category ->
             CategoriesListItem(
                 category = category,
@@ -64,19 +66,19 @@ private fun CategoriesListItem(
 ) {
     Card(
         elevation = CardDefaults.cardElevation(),
-        modifier = Modifier.padding(bottom = dimensionResource(R.dimen.padding_medium)),
+        modifier = modifier.padding(bottom = dimensionResource(R.dimen.padding_large)),
         shape = RoundedCornerShape(dimensionResource(R.dimen.card_corner_radius)),
         onClick = { onCategoryClick(category) }
     ) {
         Row(
             verticalAlignment = Alignment.CenterVertically,
-            modifier = Modifier.fillMaxWidth()
+            modifier = Modifier
                 .padding(dimensionResource(R.dimen.padding_small))
         ) {
             CategoryListItemIcon(icon = category.icon)
             Text(
                 text = stringResource(category.titleResourceId),
-                style = MaterialTheme.typography.titleLarge,
+                style = MaterialTheme.typography.headlineMedium,
                 color = MaterialTheme.colorScheme.primary
             )
         }
@@ -119,6 +121,9 @@ fun CategoriesListPreview() {
         CategoriesScreen(
             categories = CategoriesDataProvider.getCategories(),
             onCategoryClick = {},
+            modifier = Modifier
+                .padding(bottom = dimensionResource(R.dimen.padding_large))
+                .fillMaxSize()
         )
     }
 }

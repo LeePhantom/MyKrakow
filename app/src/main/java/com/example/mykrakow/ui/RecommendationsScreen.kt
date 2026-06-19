@@ -48,10 +48,10 @@ import com.example.mykrakow.R
 fun RecommendationsScreen(
     recommendations: List<Recommendation>,
     onRecommendationClick: (Recommendation) -> Unit,
-    modifier: Modifier = Modifier,
-    contentPadding: PaddingValues = PaddingValues(0.dp)
+    modifier: Modifier = Modifier
 ) {
-    LazyColumn() {
+    LazyColumn(
+        modifier = Modifier.padding(dimensionResource(R.dimen.padding_large))) {
         items(recommendations) { recommendation ->
             RecommendationsListItem(
                 recommendation = recommendation,
@@ -71,8 +71,8 @@ private fun RecommendationsListItem(
 ) {
     Card(
         elevation = CardDefaults.cardElevation(),
-        modifier = Modifier
-            .padding(bottom = dimensionResource(R.dimen.padding_medium))
+        modifier = modifier
+            .padding(bottom = dimensionResource(R.dimen.padding_large))
             .height(dimensionResource(R.dimen.card_height)),
         shape = RoundedCornerShape(dimensionResource(R.dimen.card_corner_radius)),
         onClick = { onItemClick(recommendation) }
@@ -80,14 +80,14 @@ private fun RecommendationsListItem(
         Row(
             verticalAlignment = Alignment.CenterVertically,
             modifier = Modifier
-                .fillMaxWidth()
                 .padding(dimensionResource(R.dimen.padding_small))
         ) {
             RecommendationListItemLogo(logoId = recommendation.logoImageResourceId)
             Text(
                 text = stringResource(recommendation.titleResourceId),
-                style = MaterialTheme.typography.titleLarge,
-                color = MaterialTheme.colorScheme.primary
+                style = MaterialTheme.typography.headlineMedium,
+                color = MaterialTheme.colorScheme.primary,
+                modifier = Modifier.padding(dimensionResource(R.dimen.padding_medium))
             )
         }
     }
